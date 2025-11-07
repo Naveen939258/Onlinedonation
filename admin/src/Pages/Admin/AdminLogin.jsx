@@ -17,7 +17,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/admin/auth/login", {
+      const res = await axios.post("https://onlinedonation.onrender.com/api/admin/auth/login", {
         email,
         password,
       });
