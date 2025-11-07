@@ -14,4 +14,4 @@ RUN apk add --no-cache maven && mvn clean package -DskipTests
 EXPOSE 8080
 
 # Run the built JAR
-CMD ["java", "-jar", "target/donation-backend-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/donation-backend-1.0.0.jar"]
