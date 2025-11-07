@@ -12,7 +12,7 @@ const Donations = () => {
 
   const fetchDonations = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/donations/admin/all", {
+      const res = await axios.get("https://onlinedonation.onrender.com/api/donations/admin/all", {
   headers: { "auth-token": token },
 });
       setDonations(res.data);
@@ -44,7 +44,7 @@ const Donations = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       await axios.put(
-  `http://localhost:8080/api/donations/admin/${id}/status`,
+  `https://onlinedonation.onrender.com/api/donations/admin/${id}/status`,
   { status: newStatus },
   { headers: { "auth-token": token } }
 );
