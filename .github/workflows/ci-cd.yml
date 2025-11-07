@@ -14,7 +14,9 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+         java-version: '17'
+          distribution: 'temurin'   # ✅ ensure correct JDK
+          cache: 'maven'
       - name: Build backend
         working-directory: backend
         run: mvn -B -DskipTests package
