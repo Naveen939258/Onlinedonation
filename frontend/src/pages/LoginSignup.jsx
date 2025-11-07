@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CSS/LoginSignup.css";
 
-const API_BASE = "http://localhost:8080/api"; // Spring Boot API base URL
+const API_BASE = "https://onlinedonation.onrender.com/api"; // Spring Boot API base URL
 
 const LoginSignup = () => {
   const [isSignup, setIsSignup] = useState(false);
