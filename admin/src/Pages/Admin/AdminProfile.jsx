@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import "../CSS/AdminProfile.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:8080";
+const API_BASE = process.env.REACT_APP_API_URL || "https://onlinedonation.onrender.com";
 
 const AdminProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
