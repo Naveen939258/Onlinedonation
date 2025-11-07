@@ -8,10 +8,10 @@ It enables users to contribute securely, register for charity events, and receiv
 
 ## 🔗 **Project Links**
 
-🌐 **Live Site (Frontend - Netlify):** [Click Here]("https://onlinedonationhope.netlify.app/")_
-💻 **GitHub Repository (Backend):** [Click Here]("https://github.com/Naveen939258/Onlinedonation")
-🎥 **Video Demo:** [Click Here]("https://onlinedonationhope.netlify.app/login")
-📄 **LinkedIn Article:** [Click Here](https://www.linkedin.com/in/kakarla-naveen-2092411b3/)  
+- 🌐 **Live Site (Frontend - Netlify):** [Click Here]("https://onlinedonationhope.netlify.app/")_
+- 💻 **GitHub Repository (Backend):** [Click Here]("https://github.com/Naveen939258/Onlinedonation")
+- 🎥 **Video Demo:** [Click Here]("https://onlinedonationhope.netlify.app/login")
+- 📄 **LinkedIn Article:** [Click Here](https://www.linkedin.com/in/kakarla-naveen-2092411b3/)  
 
 ---
 
@@ -122,11 +122,11 @@ Admins can manage donations, events, gallery photos, and participant certificate
 
 ## 📸 **Screenshots**
 
-🏠 **Home Page:** [Click Here]
-🎁 **Campaigns Page:** [Click Here]
-🎉 **Events & Certificates Page:** [Click Here]
-💰 **Donation Flow:** [Click Here]
-📊 **Admin Dashboard:** [Click Here]
+- 🏠 **Home Page:** [Click Here]
+- 🎁 **Campaigns Page:** [Click Here]
+- 🎉 **Events & Certificates Page:** [Click Here]
+- 💰 **Donation Flow:** [Click Here]
+- 📊 **Admin Dashboard:** [Click Here]
 
 ---
 
@@ -143,10 +143,10 @@ Admins can manage donations, events, gallery photos, and participant certificate
 
 ## 👤 **Author**
 
-**Name:** Kakarla Naveen
-**GitHub:** [Click Here](https://github.com/naveen939258)
-**LinkedIn:** [Click Here](https://www.linkedin.com/in/kakarla-naveen-2092411b3/)  
-**Email:** [22000031998cseh@gmail.com](mailto:22000031998cseh@gmail.com)
+- **Name:** Kakarla Naveen
+- **GitHub:** [Click Here](https://github.com/naveen939258)
+- **LinkedIn:** [Click Here](https://www.linkedin.com/in/kakarla-naveen-2092411b3/)
+- **Email:** [22000031998cseh@gmail.com](mailto:22000031998cseh@gmail.com)
 
 ---
 
