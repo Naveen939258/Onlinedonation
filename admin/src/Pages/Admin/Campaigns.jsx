@@ -29,7 +29,7 @@ const Campaigns = () => {
   // Fetch campaigns
   const fetchCampaigns = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/admin/campaigns", {
+      const res = await axios.get("https://onlinedonation.onrender.com/api/admin/campaigns", {
         headers: { "auth-token": token },
       });
       setCampaigns(res.data);
@@ -69,7 +69,7 @@ const Campaigns = () => {
       };
 
       if (editingId) {
-        await axios.put(`http://localhost:8080/api/admin/campaigns/${editingId}`, payload, {
+        await axios.put(`https://onlinedonation.onrender.com/api/admin/campaigns/${editingId}`, payload, {
           headers: { "auth-token": token },
         });
         toast.success("Campaign updated successfully");
