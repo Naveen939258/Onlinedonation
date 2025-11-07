@@ -3,7 +3,7 @@ import axios from "axios";
 import "../CSS/AdminPartnerManagement.css";
 import { exportToExcel, exportToPDF } from "../../utils/exportUtils";
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://onlinedonation.onrender.com/api";
 
 const AdminPartnerManagement = () => {
   const [partners, setPartners] = useState([]);
