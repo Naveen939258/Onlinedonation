@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "../CSS/EventsAdmin.css";
 import { toast } from "react-toastify";
@@ -35,7 +35,7 @@ const [uploading, setUploading] = useState(false);
   const token = localStorage.getItem("token");
 
   // ✅ Fetch all events
-  const fetchEvents = async () => {
+  const fetchEvents = useCallback(async () => {
     try {
       const res = await axios.get(`${API_BASE}/admin/events`, {
         headers: { "auth-token": token },
@@ -63,11 +63,11 @@ const [uploading, setUploading] = useState(false);
     } catch {
       toast.error("Failed to fetch events");
     }
-  };
+  }, [token]);
 
   useEffect(() => {
     fetchEvents();
-  }, []);
+  }, [fetchEvents]);
 
   // ✅ Input handler
   const handleChange = (e) =>
