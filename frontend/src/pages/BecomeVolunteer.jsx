@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CSS/BecomeVolunteer.css";
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://onlinedonation.onrender.com/api";
 
 const SKILLS_OPTIONS = [
   "Event Management",
