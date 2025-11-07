@@ -29,7 +29,7 @@ const Dashboard = () => {
   const fetchStats = useCallback(async () => {
     try {
       // ✅ Fetch donors
-      const donorRes = await axios.get("http://localhost:8080/api/admin/donors", {
+      const donorRes = await axios.get("https://onlinedonation.onrender.com/api/admin/donors", {
         headers: { "auth-token": token },
       });
       const donors = donorRes.data || [];
@@ -38,7 +38,7 @@ const Dashboard = () => {
       const blockedDonors = donors.filter((d) => d.blocked).length;
 
       // ✅ Fetch campaigns
-      const campaignRes = await axios.get("http://localhost:8080/api/admin/campaigns", {
+      const campaignRes = await axios.get("https://onlinedonation.onrender.com/api/admin/campaigns", {
         headers: { "auth-token": token },
       });
       const campaigns = campaignRes.data || [];
@@ -48,7 +48,7 @@ const Dashboard = () => {
         .slice(0, 5);
 
       // ✅ Fetch donations
-      const donationRes = await axios.get("http://localhost:8080/api/donations/admin/all", {
+      const donationRes = await axios.get("https://onlinedonation.onrender.com/api/donations/admin/all", {
         headers: { "auth-token": token },
       });
       const donations = donationRes.data || [];
@@ -56,14 +56,14 @@ const Dashboard = () => {
       const pendingDonations = donations.filter((d) => d.status !== "Processed").length;
 
       // ✅ Fetch partners
-      const partnerRes = await axios.get("http://localhost:8080/api/partners/all");
+      const partnerRes = await axios.get("https://onlinedonation.onrender.com/api/partners/all");
       const partners = partnerRes.data || [];
       const totalPartners = partners.length;
       const approvedPartners = partners.filter((p) => p.status === "APPROVED").length;
       const pendingPartners = partners.filter((p) => p.status === "PENDING").length;
 
       // ✅ Fetch volunteers
-      const volunteerRes = await axios.get("http://localhost:8080/api/volunteers/all");
+      const volunteerRes = await axios.get("https://onlinedonation.onrender.com/api/volunteers/all");
       const volunteers = volunteerRes.data || [];
       const totalVolunteers = volunteers.length;
       const approvedVolunteers = volunteers.filter((v) => v.status === "Approved").length;
