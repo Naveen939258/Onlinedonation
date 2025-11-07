@@ -3,7 +3,7 @@ import axios from "axios";
 import "./CSS/Team.css";
 import NaveenImg from "../assets/Naveen.png";
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://onlinedonation.onrender.com/api";
 
 // --- TEAM MEMBERS ---
 const teamMembers = [
