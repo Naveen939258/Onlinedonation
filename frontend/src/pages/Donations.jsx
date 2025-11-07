@@ -16,7 +16,7 @@ const Donation = () => {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/user/campaigns");
+        const res = await axios.get("https://onlinedonation.onrender.com/api/user/campaigns");
         let data = res.data;
 
         // If campaignId in URL, filter it
