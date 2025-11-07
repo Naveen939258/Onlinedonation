@@ -1,5 +1,5 @@
 // src/pages/Campaigns.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "../CSS/Campaigns.css";
 import { toast } from "react-toastify";
@@ -27,7 +27,7 @@ const Campaigns = () => {
   const token = localStorage.getItem("token");
 
   // Fetch campaigns
-  const fetchCampaigns = async () => {
+  const fetchCampaigns = useCallback(async () => {
     try {
       const res = await axios.get("https://onlinedonation.onrender.com/api/admin/campaigns", {
         headers: { "auth-token": token },
@@ -45,11 +45,11 @@ const Campaigns = () => {
       console.error("❌ Error fetching campaigns:", err.response?.data || err.message);
       toast.error("Error fetching campaigns");
     }
-  };
+  },[token];
 
   useEffect(() => {
     fetchCampaigns();
-  }, []);
+  }, [fetchCampaigns]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
