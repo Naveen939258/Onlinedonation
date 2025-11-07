@@ -106,7 +106,7 @@ const Campaigns = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this campaign?")) return;
     try {
-      await axios.delete(`http://localhost:8080/api/admin/campaigns/${id}`, {
+      await axios.delete(`https://onlinedonation.onrender.com/api/admin/campaigns/${id}`, {
         headers: { "auth-token": token },
       });
       toast.success("Campaign deleted successfully");
@@ -121,7 +121,7 @@ const Campaigns = () => {
     try {
       const updatedStatus = campaign.status === "Active" ? "Inactive" : "Active";
       await axios.put(
-        `http://localhost:8080/api/admin/campaigns/${campaign.id}/status`,
+        `https://onlinedonation.onrender.com/api/admin/campaigns/${campaign.id}/status`,
         { status: updatedStatus },
         { headers: { "auth-token": token } }
       );
