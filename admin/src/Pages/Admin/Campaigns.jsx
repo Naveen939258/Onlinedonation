@@ -45,7 +45,7 @@ const Campaigns = () => {
       console.error("❌ Error fetching campaigns:", err.response?.data || err.message);
       toast.error("Error fetching campaigns");
     }
-  },[token];
+  },[token]);
 
   useEffect(() => {
     fetchCampaigns();
