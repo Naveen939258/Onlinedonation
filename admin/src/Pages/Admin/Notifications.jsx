@@ -12,7 +12,7 @@ const Notifications = () => {
   const fetchNotifications = useCallback(async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/admin/notifications",
+        "https://onlinedonation.onrender.com/api/admin/notifications",
         { headers: { "auth-token": token } }
       );
       setNotifications(res.data);
@@ -34,7 +34,7 @@ const Notifications = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/admin/notifications",
+        "https://onlinedonation.onrender.com/api/admin/notifications",
         { message },
         { headers: { "auth-token": token } }
       );
