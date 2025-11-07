@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./CSS/Settings.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE = process.env.REACT_APP_API_URL || "https://onlinedonation.onrender.com/api";
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dxzumlzrv/image/upload";
 const CLOUDINARY_UPLOAD_PRESET = "donation_preset";
 
