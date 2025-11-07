@@ -11,7 +11,7 @@ const Campaign = () => {
   // ✅ Fetch campaigns from backend
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/user/campaigns")
+      .get("https://onlinedonation.onrender.com/api/user/campaigns")
       .then((res) => setCampaigns(res.data))
       .catch((err) => console.error("Error fetching campaigns:", err));
   }, []);
