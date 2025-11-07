@@ -18,7 +18,7 @@ const Donors = () => {
   // ✅ Fetch donors
   const fetchDonors = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/admin/donors", {
+      const res = await axios.get("https://onlinedonation.onrender.com/api/admin/donors", {
         headers: { "auth-token": token },
       });
       setDonors(res.data);
@@ -65,7 +65,7 @@ const Donors = () => {
     console.log("🟠 Block clicked for donor:", id);
     try {
       const res = await axios.patch(
-        `http://localhost:8080/api/admin/donors/${id}/block`,
+        `https://onlinedonation.onrender.com/api/admin/donors/${id}/block`,
         {},
         { headers: { "auth-token": token } }
       );
@@ -81,7 +81,7 @@ const Donors = () => {
     console.log("🟢 Verify clicked for donor:", id);
     try {
       const res = await axios.patch(
-        `http://localhost:8080/api/admin/donors/${id}/verify`,
+        `https://onlinedonation.onrender.com/api/admin/donors/${id}/verify`,
         {},
         { headers: { "auth-token": token } }
       );
@@ -96,7 +96,7 @@ const Donors = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this donor?")) return;
     try {
-      await axios.delete(`http://localhost:8080/api/admin/donors/${id}`, {
+      await axios.delete(`https://onlinedonation.onrender.com/api/admin/donors/${id}`, {
         headers: { "auth-token": token },
       });
       fetchDonors();
@@ -109,7 +109,7 @@ const Donors = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:8080/api/admin/donors/${editDonor.id}`,
+        `https://onlinedonation.onrender.com/api/admin/donors/${editDonor.id}`,
         {
           username: editDonor.username,
           email: editDonor.email,
@@ -128,7 +128,7 @@ const Donors = () => {
   const handleCreate = async () => {
     try {
       await axios.post(
-        "http://localhost:8080/api/admin/donors",
+        "https://onlinedonation.onrender.com/api/admin/donors",
         {
           username: editDonor.username,
           email: editDonor.email,
