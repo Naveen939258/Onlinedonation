@@ -8,7 +8,7 @@ It enables users to contribute securely, register for charity events, and receiv
 
 ## 🔗 **Project Links**
 
-- 🌐 **Live Site (Frontend - Netlify):** [Click Here](https://onlinedonationhope.netlify.app/)_
+- 🌐 **Live Site (Frontend - Netlify):** [Click Here](https://onlinedonationhope.netlify.app/)
 - 💻 **GitHub Repository (Backend):** [Click Here](https://github.com/Naveen939258/Onlinedonation)
 - 🎥 **Video Demo:** [Click Here](https://onlinedonationhope.netlify.app/login)
 - 📄 **LinkedIn Article:** [Click Here](https://www.linkedin.com/in/kakarla-naveen-2092411b3/)  
