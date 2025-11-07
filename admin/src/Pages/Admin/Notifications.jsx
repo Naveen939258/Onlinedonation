@@ -1,0 +1,91 @@
+import React, { useEffect, useState, useCallback } from "react";
+import axios from "axios";
+import "../CSS/Notifications.css";
+
+const Notifications = () => {
+  const [notifications, setNotifications] = useState([]);
+  const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const token = localStorage.getItem("token");
+
+  // Fetch notifications
+  const fetchNotifications = useCallback(async () => {
+    try {
+      const res = await axios.get(
+        "http://localhost:8080/api/admin/notifications",
+        { headers: { "auth-token": token } }
+      );
+      setNotifications(res.data);
+    } catch (err) {
+      console.error("❌ Error fetching notifications:", err);
+    }
+  }, [token]);
+
+  useEffect(() => {
+    fetchNotifications();
+  }, [fetchNotifications]);
+
+  // Send notification
+  const handleSend = async (e) => {
+    e.preventDefault();
+    if (!message.trim() || isSending) return;
+
+    setIsSending(true);
+
+    try {
+      const res = await axios.post(
+        "http://localhost:8080/api/admin/notifications",
+        { message },
+        { headers: { "auth-token": token } }
+      );
+
+      if (res.status === 200) {
+        setMessage(""); // clear input
+        setNotifications((prev) => [res.data, ...prev]); // prepend new notification
+        alert("✅ Notification sent successfully!");
+      }
+    } catch (err) {
+      console.error("❌ Failed to send notification:", err);
+      alert(err.response?.data?.message || "❌ Failed to send notification");
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  return (
+    <div className="notifications-page">
+      <h2>📢 Send Notification</h2>
+
+      <form onSubmit={handleSend} className="send-container">
+        <textarea
+          placeholder="Type your message..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          rows={5}
+          required
+        />
+        <button type="submit" disabled={!message.trim() || isSending}>
+          {isSending ? "Sending..." : "Send Notification"}
+        </button>
+      </form>
+
+      <div className="notifications-list">
+        <h3>Recent Announcements</h3>
+        {notifications.length > 0 ? (
+          <ul>
+            {notifications.map((n) => (
+              <li key={n.id}>
+                <p>{n.message}</p>
+                <small>{new Date(n.createdAt).toLocaleString()}</small>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No notifications sent yet.</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Notifications;

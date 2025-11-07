@@ -1,0 +1,196 @@
+/* =============================
+   Donation Page Styles
+============================= */
+.plans-page {
+  font-family: "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Header */
+.plans-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.plans-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plans-header p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Donation Cards Grid */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Donation Card */
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card-top h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffd700;
+}
+
+.plan-card-top p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.plan-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffeb3b;
+}
+
+.plan-card-bottom p {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.plan-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background: #ffd700;
+  color: #0f172a;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #ffc107;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal {
+  background: #1c1c3c;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+.modal-header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #cbd5e1;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

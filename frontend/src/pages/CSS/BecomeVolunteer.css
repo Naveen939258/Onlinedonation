@@ -1,0 +1,220 @@
+.volunteer-page {
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.volunteer-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.volunteer-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.volunteer-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: visible; 
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.form-row option{
+    color: #0f2027;
+    background-color: #b0bec5;
+}
+.volunteer-form input,
+.volunteer-form select,
+.volunteer-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #b0bec5;
+  font-size: 1rem;
+}
+
+.volunteer-form input::placeholder,
+.volunteer-form textarea::placeholder {
+  color: #b0bec5;
+}
+
+.volunteer-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00ffcc;
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volunteer-form button:hover {
+  background: #06d6a0;
+}
+
+.volunteer-status {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/* 🧩 Skills Dropdown Wrapper */
+.skills-dropdown {
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.skills-dropdown:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+}
+
+/* ▼ Dropdown Arrow */
+.skills-dropdown::after {
+  content: "▼";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+.skills-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* 🌈 Dropdown Menu */
+.skills-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(17, 25, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: dropdownFade 0.25s ease;
+}
+
+
+
+/* ✨ Dropdown Animation */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Option styling */
+.skills-options {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  background: rgba(17, 25, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: dropdownFade 0.25s ease;
+  z-index: 5; /* smaller z-index to stay with form */
+}
+
+
+.skills-option:hover {
+  background: rgba(0, 255, 204, 0.15);
+}
+
+.skills-option input[type="checkbox"] {
+  accent-color: #00ffcc;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.skills-option label {
+  flex: 1;
+  cursor: pointer;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+/* 🌟 Selected Skills inside box */
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.selected-skill {
+  background: rgba(0, 255, 204, 0.2);
+  color: #00ffcc;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* 🧭 Scrollbar styling */
+.skills-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-options::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 204, 0.3);
+  border-radius: 4px;
+}
+
+.skills-options::-webkit-scrollbar-track {
+  background: transparent;
+}

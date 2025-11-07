@@ -1,0 +1,118 @@
+.billing-page {
+  text-align: center;
+  padding: 2rem;
+  background: #f7f7f7;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.billing-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+/* Order Card */
+.order-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.order-card h3 {
+  color: #0f52ba;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.order-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.order-card b {
+  color: #222;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+/* Status tags */
+.status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.status-success {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+.status-pending {
+  color: #856404;
+  background-color: #fff3cd;
+}
+
+.status-failed {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+/* Buttons */
+.billing-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ ensures both buttons align vertically */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-home,
+.btn-campaigns {
+  display: inline-flex; /* ✅ makes text centered vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home {
+  background: #28a745;
+}
+
+.btn-home:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-campaigns {
+  background: #007bff;
+}
+
+.btn-campaigns:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,242 @@
+/* =============================
+   Payment Page Container
+============================= */
+.payment-page,
+.billing-page {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+/* =============================
+   Payment Page Title
+============================= */
+.payment-page h2,
+.billing-page h1 {
+  font-size: 1.8rem;
+  color: #0f52ba;
+  margin-bottom: 25px;
+}
+
+/* =============================
+   Donation Amount Input
+============================= */
+.donation-amount {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.donation-amount label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.donation-amount input {
+  width: 150px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.donation-amount input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* =============================
+   Payment Button
+============================= */
+.payment-page button,
+.pay-btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  background: linear-gradient(135deg, #0f52ba, #007bff);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.payment-page button:hover,
+.pay-btn:hover {
+  background: linear-gradient(135deg, #0d47a1, #0069d9);
+}
+
+.payment-page button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* =============================
+   Billing Order Card
+============================= */
+.order-card {
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-top: 20px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.order-card h3 {
+  color: #0f52ba;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.order-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.order-card b {
+  color: #222;
+}
+
+/* =============================
+   My Donations / Go Home Button
+============================= */
+.btn-home {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #28a745;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-home:hover {
+  background: #218838;
+}
+
+/* =============================
+   Promo Box (Optional)
+============================= */
+.promo-box {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.promo-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.promo-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.promo-box button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.promo-box button:hover {
+  background: #0056b3;
+}
+
+.promo-box button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 768px) {
+  .payment-page,
+  .billing-page {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .donation-amount {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* =============================
+   Donor Name Input
+============================= */
+.donor-name-box {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.donor-name-box label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.donor-name-box input {
+  width: 300px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.donor-name-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .donor-name-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .donor-name-box input {
+    width: 100%;
+  }
+}
